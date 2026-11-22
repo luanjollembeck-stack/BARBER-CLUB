@@ -7,7 +7,7 @@ import type {
     ReservaProduto,
     CriarVendaCompleta,
     CriarReservaProduto
-} from "../types/vendas.js";
+} from "../types/vendas.types.js";
 
 class VendasRepository {
 

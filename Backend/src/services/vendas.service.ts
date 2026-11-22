@@ -4,7 +4,7 @@ import { vendasRepository } from "../repository/vendas.repository.js";
 import type {
     CriarVendaCompleta,
     CriarReservaProduto
-} from "../types/vendas.js";
+} from "../types/vendas.types.js";
 
 class VendasService {
 

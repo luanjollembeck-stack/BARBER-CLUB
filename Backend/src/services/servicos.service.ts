@@ -1,5 +1,4 @@
 import { servicosRepository } from "../repository/servicos.repository.js";
-
 import type { CriarServico } from "../types/servicos.types.js";
 
 class ServicosService {
