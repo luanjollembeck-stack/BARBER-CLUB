@@ -1,5 +1,4 @@
 import { Router } from "express";
-
 import { servicoController } from "../controller/servicos.controller.js";
 
 export const servicoRouter = Router();
