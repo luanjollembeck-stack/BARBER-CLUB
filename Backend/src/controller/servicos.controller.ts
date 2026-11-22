@@ -1,8 +1,6 @@
 import { type Request, type Response } from "express";
-
 import { servicosService } from "../services/servicos.service.js";
-
-import { CriarServico } from "../types/servicos.js";
+import type { CriarServico } from "../types/servicos.types.js";
 
 class ServicosController {
 
