@@ -1,16 +1,15 @@
-
 import { useState } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const links =  [
-  { name: "Início", href: "#inicio" },
-  { name: "Serviços", href: "#servicos" },
-  { name: "Sobre", href: "#sobre" },
-  { name: "Planos", href: "#planos" },
-  { name: "Contato", href: "#contato" },
-];
+  const links = [
+    { name: "Início", href: "#inicio" },
+    { name: "Serviços", href: "#servicos" },
+    { name: "Sobre", href: "#sobre" },
+    { name: "Planos", href: "#planos" },
+    { name: "Contato", href: "#contato" },
+  ];
 
   return (
     <nav className="w-full bg-[#111111] text-white px-6 py-5">
@@ -18,7 +17,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <a
-          href=""
+          href="#inicio"
           className="text-2xl font-bold tracking-[0.2em] text-[#C6A15B]"
         >
           BARBER CLUB
@@ -35,6 +34,23 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+        </div>
+
+        {/* Botões desktop */}
+        <div className="hidden items-center gap-3 md:flex">
+          <a
+            href="/login"
+            className="rounded-md border border-[#C6A15B] px-5 py-2 text-sm transition-colors hover:bg-[#C6A15B] hover:text-black"
+          >
+            Login
+          </a>
+
+          <a
+            href="/cadastro"
+            className="rounded-md bg-[#C6A15B] px-5 py-2 text-sm font-semibold text-black transition-colors hover:bg-[#b18b48]"
+          >
+            Cadastro
+          </a>
         </div>
 
         {/* Botão menu mobile */}
@@ -59,6 +75,25 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+
+          {/* Botões mobile */}
+          <div className="flex gap-3 pt-2">
+            <a
+              href="/login"
+              onClick={() => setMenuOpen(false)}
+              className="flex-1 rounded-md border border-[#C6A15B] py-2 text-center transition-colors hover:bg-[#C6A15B] hover:text-black"
+            >
+              Login
+            </a>
+
+            <a
+              href="/cadastro"
+              onClick={() => setMenuOpen(false)}
+              className="flex-1 rounded-md bg-[#C6A15B] py-2 text-center font-semibold text-black transition-colors hover:bg-[#b18b48]"
+            >
+              Cadastro
+            </a>
+          </div>
         </div>
       )}
     </nav>
