@@ -29,7 +29,7 @@ export default function AgendaLoc() {
             </p>
 
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5548984678115"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-3 rounded-md bg-[#C6A15B] px-7 py-4 font-semibold text-black transition hover:bg-[#ddbd7d]"
@@ -80,7 +80,7 @@ export default function AgendaLoc() {
               </h3>
 
               <p className="text-gray-400">
-                WhatsApp: (00) 00000-0000
+                WhatsApp: (48) 98460-9421
               </p>
 
               <p className="text-gray-400">

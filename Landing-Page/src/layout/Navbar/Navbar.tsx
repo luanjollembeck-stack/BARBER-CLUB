@@ -4,12 +4,13 @@ import { useState } from "react";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const links = [
-    { name: "Início", href: "" },
-    { name: "Serviços", href: "" },
-    { name: "Sobre", href: "" },
-    { name: "Contato", href: "" },
-  ];
+  const links =  [
+  { name: "Início", href: "#inicio" },
+  { name: "Serviços", href: "#servicos" },
+  { name: "Sobre", href: "#sobre" },
+  { name: "Planos", href: "#planos" },
+  { name: "Contato", href: "#contato" },
+];
 
   return (
     <nav className="w-full bg-[#111111] text-white px-6 py-5">
