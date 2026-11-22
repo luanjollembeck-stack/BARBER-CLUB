@@ -53,17 +53,17 @@ class UsuariosController {
             });
         }
     }
-
     async login(
         request: Request<{}, {}, LoginUsuario>,
         response: Response
     ) {
         try {
             const dados = request.body;
-            const usuario = await usuariosService.login(dados);
+            const res = await usuariosService.login(dados);
             return response.json({
                 mensagem: "Login realizado com sucesso",
-                usuario
+                usuario: res.usuario,
+                token: res.token
             });
         } catch (error) {
             console.error(error);

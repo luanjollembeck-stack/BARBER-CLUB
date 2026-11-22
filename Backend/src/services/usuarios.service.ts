@@ -1,8 +1,6 @@
-
+import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-
 import { usuariosRepository } from "../repository/usuarios.repository.js";
-
 import type { CriarUsuario, LoginUsuario } from "../types/usuarios.types.js";
 
 class UsuariosService {
@@ -38,8 +36,26 @@ class UsuariosService {
         if (!senhaCorreta) {
             throw new Error("E-mail ou senha incorretos");
         }
+        const JWT_SECRET = process.env.JWT_SECRET;
+        if (!JWT_SECRET) {
+            throw new Error("Chave JWT não configurada");
+        }
+        const token = jwt.sign(
+            {
+                id_usuario: usuario.id_usuario,
+                email: usuario.email,
+                nivel_acesso: usuario.nivel_acesso
+            },
+            JWT_SECRET,
+            {
+                expiresIn: "1d"
+            }
+        );
         const { senha_hash, ...usuarioSemSenha } = usuario;
-        return usuarioSemSenha;
+        return {
+            usuario: usuarioSemSenha,
+            token
+        };
     }
 
     async inativarUsuario(id: string) {
