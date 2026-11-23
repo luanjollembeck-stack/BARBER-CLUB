@@ -3,13 +3,13 @@ import { planosController } from "../controller/planos.controller.js";
 
 export const planosRouter = Router();
 
-// =============== PLANOS ===============
+// PLANOS
 planosRouter.get("/", planosController.getPlanos,);
 planosRouter.post("/", planosController.postPlano,);
 planosRouter.get("/:id", planosController.getPlanoById,);
 planosRouter.patch("/:id", planosController.patchPlano,);
 
-// =============== ASSINATURAS ===============
+// ASSINATURAS
 
 planosRouter.get("/assinaturas", planosController.getAssinaturas,);
 planosRouter.post("/assinaturas", planosController.postAssinatura,);

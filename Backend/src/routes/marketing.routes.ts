@@ -3,7 +3,7 @@ import { marketingController } from "../controller/marketing.controller.js";
 
 export const marketingRouter = Router();
 
-// =============== MARKETING ===============
+// MARKETING
 
 marketingRouter.get("/destaques",marketingController.getDestaques,);
 
@@ -12,7 +12,7 @@ marketingRouter.post("/",marketingController.post,);
 marketingRouter.get("/:id",marketingController.getById,);
 marketingRouter.patch("/:id",marketingController.patch,);
 
-// =============== COMODIDADES ===============
+// COMODIDADES
 
 marketingRouter.get("/comodidades",marketingController.getComodidades,);
 marketingRouter.post("/comodidades",marketingController.postComodidade,);
