@@ -10,6 +10,7 @@ import { pagamentoRouter } from "./routes/pagamentos.routes.js";
 import { financeiroRouter } from "./routes/financeiro.routes.js";
 import { planosRouter } from "./routes/planos.routes.js";
 import { marketingRouter } from "./routes/marketing.routes.js";
+import { estabelecimentoRouter } from "./routes/estabelecimento,routes.js";
 
 const app = express();
 const port = 3000
@@ -38,7 +39,7 @@ app.use("/planos", planosRouter);
 
 app.use("/marketing", marketingRouter);
 
-
+app.use("estabelecimento", estabelecimentoRouter);
 
 app.get("health", (req: Request, res: Response) => {
     return response.json({
