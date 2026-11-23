@@ -8,6 +8,7 @@ import { estoqueRouter } from "./routes/estoque.routes.js";
 import { vendaRouter } from "./routes/vendas.routes.js";
 import { pagamentoRouter } from "./routes/pagamentos.routes.js";
 import { financeiroRouter } from "./routes/financeiro.routes.js";
+import { planosRouter } from "./routes/planos.routes.js";
 
 const app = express();
 const port = 3000
@@ -31,6 +32,10 @@ app.use("/vendas", vendaRouter)
 app.use("/pagamentos", pagamentoRouter);
 
 app.use("financeiro", financeiroRouter);
+
+app.use("/planos", planosRouter);
+
+
 
 app.get("health", (req: Request, res: Response) => {
     return response.json({

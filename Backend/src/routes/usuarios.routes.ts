@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { usuarioController } from "../controller/usuarios.controller.js";
 import { Auth } from "../middleware/Auth.js";
+
 export const usuarioRouter = Router();
 
 usuarioRouter.post("/login", usuarioController.login);
